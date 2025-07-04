@@ -15,8 +15,8 @@ def ask():
         question = data.get("question")
         if not question:
             return jsonify({"error": "Missing 'question' field"}), 400
-        #answer = query_chatbot(question)
-        answer = "test"
+        answer = query_chatbot(question)
+        #answer = "test"
         if answer is None:
             return jsonify({"error": "No response from chatbot"}), 500
         return jsonify({"response": answer})
