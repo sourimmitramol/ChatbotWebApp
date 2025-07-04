@@ -1,10 +1,8 @@
 # application.py
 from flask import Flask, request, jsonify
-from flasgger import Swagger
 from final_chatbot import query_chatbot
 
 app = Flask(__name__)
-swagger = Swagger(app)
 
 @app.route("/")
 def hello():
@@ -25,6 +23,6 @@ def ask():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8000)
+#if __name__ == '__main__':
+#    app.run(host="0.0.0.0", port=8000)
         
