@@ -1,8 +1,10 @@
 # application.py
 from flask import Flask, request, jsonify
+from flasgger import Swagger
 from final_chatbot import query_chatbot
 
 app = Flask(__name__)
+swagger = Swagger(app)
 
 @app.route("/")
 def hello():
