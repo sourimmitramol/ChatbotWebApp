@@ -2,3 +2,4 @@ flask
 flasgger
 openai
 requests
+gunicorn
